@@ -1,0 +1,21 @@
+# Requirements for production
+# Use pip install -r stable.req.txt
+django<1.6
+https://github.com/divio/django-cms/archive/develop.zip#egg=django-cms
+south
+gunicorn
+raven
+python-memcached
+psycopg2
+PIL
+python-dateutil
+supervisor
+django-tinymce
+django-compressor
+django-admin-shortcuts
+djangocms-admin-style
+https://github.com/raphaa/django-rj-utils/archive/master.zip#egg=django-rj-utils
+django-bootstrap-pagination
+django-bootstrap-toolkit
+django-piwik
+easy-thumbnails

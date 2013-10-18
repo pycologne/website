@@ -1,0 +1,6 @@
+# Requirements for development
+# Use pip install -r development.req.txt
+ipython
+ipdb
+django-debug-toolbar
+django-devserver

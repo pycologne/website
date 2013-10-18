@@ -1,0 +1,45 @@
+{% load cms_tags i18n sekizai_tags %}<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+  <head>
+    <title>{% page_attribute "page_title" %}{% block subtitle %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    {% addtoblock "js" %}
+    <script type="text/javascript">
+      var STATIC_URL = '{{ STATIC_URL }}';
+    </script>
+    <script type="text/javascript" src="{{ STATIC_URL }}website/js/jquery/jquery.min.js"></script>
+    {% if debug %}
+    <script src="{{ STATIC_URL }}website/js/less.min.js"></script>
+    {% endif %}
+    {% endaddtoblock %}
+    {% render_block "css" postprocessor "django_rj_utils.sekizai_postprocessor.compress" %}
+    <script type="text/javascript" src="{{ STATIC_URL }}website/js/html5shiv.min.js"></script>
+  </head>
+  <body>
+    {% cms_toolbar %}
+
+    {% include "header.html" %}
+
+    {% block base_content %}{% endblock %}
+
+    {% include "footer.html" %}
+
+    {% addtoblock "js" %}
+    <script type="text/javascript" src="{{ STATIC_URL }}website/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}website/js/scripts.js"></script>
+    {% endaddtoblock %}
+    {% render_block "js" postprocessor "django_rj_utils.sekizai_postprocessor.compress" %}
+    {% addtoblock "css" %}
+    <link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}website/css/website.less" />
+    {% endaddtoblock %}
+  </body>
+</html>
