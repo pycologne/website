@@ -10,7 +10,6 @@ psycopg2
 PIL
 python-dateutil
 supervisor
-django-tinymce
 django-compressor
 django-admin-shortcuts
 djangocms-admin-style
