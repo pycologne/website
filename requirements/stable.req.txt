@@ -13,6 +13,7 @@ supervisor
 django-compressor
 django-admin-shortcuts
 djangocms-admin-style
+djangocms_text_ckeditor
 https://github.com/raphaa/django-rj-utils/archive/master.zip#egg=django-rj-utils
 django-bootstrap-pagination
 django-bootstrap-toolkit
