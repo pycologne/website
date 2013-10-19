@@ -11,17 +11,27 @@ Development
 Installation
 ++++++++++++
 
-1. Fork this repository
-2. Clone your fork
-3. Grab this gist::
+1. Either:
 
-	$ curl -O https://gist.github.com/raphaa/7045608/raw/7138cb7a6ad1bb3c4be12553633e5c3f0646b361/initcmsproject.sh
-	$ sh initcmsproject.sh
+    - Fork this repository and clone your fork
 
-4. Run the development server::
+3. Make a virtual environment, e.g.::
+
+    mkvirtualenv [--no-site-packages] pycologne-website
+
+4. Install packages necessary for bootstrapping::
+
+    pip install django fabric
+
+4. Change into the checkout directory and run::
+
+    $ fab install_dev_requirements syncdb mo
+
+5. Run the development server::
 
 	$ ./manage.py runserver
 
-5. Send pull requests.
+6. Send pull requests.
+
 
 That's it! Happy developing :)
