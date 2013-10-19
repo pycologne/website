@@ -3,7 +3,7 @@ pyCologne website
 
 
 This is the website of the Python UserGroup Cologne.
-
+http://www.pycologne.de
 
 Development
 -----------
