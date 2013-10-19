@@ -13,25 +13,31 @@ Installation
 
 1. Either:
 
-    - Fork this repository and clone your fork
+    - Clone this repository directly (website team members)::
+
+        $ git clone https://github.com/pycologne/website.git
+
+    - Or fork this repository and clone your fork (others).
 
 3. Make a virtual environment, e.g.::
 
-    mkvirtualenv [--no-site-packages] pycologne-website
+    $ mkvirtualenv [--no-site-packages] pycologne-website
 
 4. Install packages necessary for bootstrapping::
 
-    pip install django fabric
+    $ pip install django fabric
 
-4. Change into the checkout directory and run::
+5. Change into the checkout directory and run::
 
+    $ python -c "import uuid; print('SECRET_KEY = \"%s\"' % uuid.uuid1())" > \
+        pycologne/settings/local.py
     $ fab install_dev_requirements syncdb mo
 
-5. Run the development server::
+6. Run the development server::
 
 	$ ./manage.py runserver
 
-6. Send pull requests.
+7. Send pull requests.
 
 
 That's it! Happy developing :)
