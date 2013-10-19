@@ -75,6 +75,7 @@ INSTALLED_APPS = (
     # Default Django apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django-reversion',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
@@ -83,6 +84,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     # For Django-CMS
     'cms',
+    'cms.stacks',
     'mptt',
     'menus',
     'sekizai',
@@ -147,8 +149,14 @@ CMS_TEMPLATES = (
     ('default.html', 'Default'),
 )
 
-#CMS_PLACEHOLDER_CONF = {
-#}
+###CMS_PLACEHOLDER_CONF = {
+    ###'content': {
+        ###'plugins': ['TextPlugin', 'PicturePlugin'],
+        ###'text_only_plugins': ['LinkPlugin'],
+        ###'extra_context': {"width": 640},
+        ###'name': gettext("Content"),
+    ###}
+###}
 
 
 # Important! Less must be installed: http://lesscss.org/#-server-side-usage
