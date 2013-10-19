@@ -75,7 +75,7 @@ INSTALLED_APPS = (
     # Default Django apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django-reversion',
+    #'django-reversion',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
@@ -166,8 +166,8 @@ THUMBNAIL_PROCESSORS = (
 CMS_TEMPLATES = (
     ## Customize this
     ('default.html', 'Default'),
-    ('index.html', 'Home (index)'),
-    ('page.html', 'Default (page)')
+    # ('index.html', 'Home (index)'),
+    ('demo.html', 'Demo (static page)')
     # TODO - add custom templates!
 )
 
