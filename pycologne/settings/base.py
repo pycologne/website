@@ -75,6 +75,7 @@ INSTALLED_APPS = (
     # Default Django apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django-reversion',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
@@ -84,6 +85,7 @@ INSTALLED_APPS = (
     # For Django-CMS
     'djangocms_text_ckeditor', # note this needs to be above the 'cms' entry
     'cms',
+    'cms.stacks',
     'mptt',
     'menus',
     'sekizai',
@@ -169,8 +171,14 @@ CMS_TEMPLATES = (
     # TODO - add custom templates!
 )
 
-#CMS_PLACEHOLDER_CONF = {
-#}
+###CMS_PLACEHOLDER_CONF = {
+    ###'content': {
+        ###'plugins': ['TextPlugin', 'PicturePlugin'],
+        ###'text_only_plugins': ['LinkPlugin'],
+        ###'extra_context': {"width": 640},
+        ###'name': gettext("Content"),
+    ###}
+###}
 
 
 # Important! Less must be installed: http://lesscss.org/#-server-side-usage

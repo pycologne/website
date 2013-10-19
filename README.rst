@@ -11,17 +11,33 @@ Development
 Installation
 ++++++++++++
 
-1. Fork this repository
-2. Clone your fork
-3. Grab this gist::
+1. Either:
 
-	$ curl -O https://gist.github.com/raphaa/7045608/raw/7138cb7a6ad1bb3c4be12553633e5c3f0646b361/initcmsproject.sh
-	$ sh initcmsproject.sh
+    - Clone this repository directly (website team members)::
 
-4. Run the development server::
+        $ git clone https://github.com/pycologne/website.git
+
+    - Or fork this repository and clone your fork (others).
+
+3. Make a virtual environment, e.g.::
+
+    $ mkvirtualenv [--no-site-packages] pycologne-website
+
+4. Install packages necessary for bootstrapping::
+
+    $ pip install django fabric
+
+5. Change into the checkout directory and run::
+
+    $ python -c "import uuid; print('SECRET_KEY = \"%s\"' % uuid.uuid1())" > \
+        pycologne/settings/local.py
+    $ fab install_dev_requirements syncdb mo
+
+6. Run the development server::
 
 	$ ./manage.py runserver
 
-5. Send pull requests.
+7. Send pull requests.
+
 
 That's it! Happy developing :)
