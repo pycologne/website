@@ -82,12 +82,25 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     # For Django-CMS
+    'djangocms_text_ckeditor', # note this needs to be above the 'cms' entry
     'cms',
     'mptt',
     'menus',
     'sekizai',
+    # added
+    'cms.stacks',
+    #'djangocms_style',
+    #'djangocms_column',
+    'cms.plugins.file',
+    'cms.plugins.googlemap',
+    #'cms.plugins.inherit',
     'cms.plugins.link',
     'cms.plugins.picture',
+    'cms.plugins.snippet',
+    'cms.plugins.teaser',
+    'cms.plugins.teaser',
+    'cms.plugins.video',
+    #'reversion',
     # Other
     'easy_thumbnails',
     'south',
@@ -96,6 +109,11 @@ INSTALLED_APPS = (
     'bootstrap_toolkit',
     'bootstrap-pagination',
     'piwik',
+    # future
+    # 'filer',
+    # 'taggit',
+    # 'cmsplugin_filer_image',
+    # custom Apps - TODO
 )
 
 STATICFILES_FINDERS = (
@@ -144,7 +162,11 @@ THUMBNAIL_PROCESSORS = (
 # DjangoCMS
 # Cannot be empty!
 CMS_TEMPLATES = (
+    ## Customize this
     ('default.html', 'Default'),
+    ('index.html', 'Home (index)'),
+    ('page.html', 'Default (page)')
+    # TODO - add custom templates!
 )
 
 #CMS_PLACEHOLDER_CONF = {

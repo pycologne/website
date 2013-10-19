@@ -1,4 +1,5 @@
-{% load cms_tags i18n sekizai_tags %}<!doctype html>
+{% load cms_tags i18n sekizai_tags menu_tags placeholder_tags stack_tags %}
+<!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
@@ -26,13 +27,12 @@
   </head>
   <body>
     {% cms_toolbar %}
-
     {% include "header.html" %}
-
+    <ul>
+        {% show_menu 0 100 100 100 %}
+    </ul>
     {% block base_content %}{% endblock %}
-
-    {% include "footer.html" %}
-
+    {% include "footer.html" %} 
     {% addtoblock "js" %}
     <script type="text/javascript" src="{{ STATIC_URL }}website/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}website/js/scripts.js"></script>
