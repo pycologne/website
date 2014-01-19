@@ -8,3 +8,6 @@
 logs/
 *.mo
 staticfiles/
+.settings
+.project
+.pydevproject
