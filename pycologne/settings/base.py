@@ -109,7 +109,7 @@ INSTALLED_APPS = (
     'compressor',
     'django_rj_utils',
     'bootstrap_toolkit',
-    'bootstrap-pagination',
+    'bootstrap_pagination',
     'piwik',
     # future
     # 'filer',
