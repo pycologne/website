@@ -19,7 +19,7 @@ Installation
 
     - Or fork this repository and clone your fork (others).
 
-3. Make a virtual environment, e.g.::
+3. Make a virtual environment using mkvirtualenv or mkproject, e.g.::
 
     $ mkvirtualenv [--no-site-packages] pycologne-website
 
