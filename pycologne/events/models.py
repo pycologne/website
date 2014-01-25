@@ -51,7 +51,7 @@ class Event(models.Model):
 #        return self.title
 
     def __unicode__(self):
-        return "{0}, {1} ({2})".format(
+        return u"{0}, {1} ({2})".format(
             self.title, 
             self.date.strftime('%d.%m.%Y'),
             self.get_kind_display())
