@@ -68,6 +68,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'pycologne.urls'
 
 INSTALLED_APPS = (
+    # custom Apps for PyCologne Website
+    'pycologne.events',
     'pycologne.website',
     # Custom administration
     'admin_shortcuts',
@@ -107,12 +109,11 @@ INSTALLED_APPS = (
     'django_rj_utils',
     'bootstrap_toolkit',
     'bootstrap_pagination',
-    'piwik',
-    # future
+    # future:
+    # 'piwik',
     # 'filer',
     # 'taggit',
     # 'cmsplugin_filer_image',
-    # custom Apps - TODO
 )
 
 STATICFILES_FINDERS = (
@@ -163,6 +164,7 @@ THUMBNAIL_PROCESSORS = (
 CMS_TEMPLATES = (
     ## Customize this
     ('default.html', 'Default'),
+    ('home.html', 'Home'),
     # ('index.html', 'Home (index)'),
     ('demo.html', 'Demo (static page)')
     # TODO - add custom templates!

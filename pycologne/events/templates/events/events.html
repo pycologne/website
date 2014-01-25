@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block subtitle %}
+	{% trans "Events" %}
+{% endblock %}
+
+{% block base_content %}
+
+<h1>{% trans "Events" %}</h1>
+
+    {% if events %}
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans "Title" %}</th>
+                <th>{% trans "Location" %}</th>
+                <th>{% trans "Date" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in events %}
+            <tr>
+                <td><a href="{% url 'events.eventdetails' event.pk %}">{{ event.title }}</a></td>
+                <td>{{ event.location }}</td>
+                <td>{{ event.date|date:"DATE_FORMAT" }}: {{ event.date|time:"TIME_FORMAT" }} - {{ event.end_date|time:"TIME_FORMAT" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="empty">{% trans "No events found." %}</p>
+    {% endif %}
+
+{% endblock %}
