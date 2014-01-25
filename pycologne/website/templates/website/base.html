@@ -31,6 +31,8 @@
         <div class="container">
             {% include "website/header.html" %}
             {% block base_content %}{% endblock %}
+            {#required for the userprofiles off-shelve-templates - to be removed after writing our own: #}
+            {% block content %}{% endblock %}
         </div>
     </div>
     {% include "website/footer.html" %}
