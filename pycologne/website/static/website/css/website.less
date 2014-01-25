@@ -9,6 +9,19 @@
 @brand-primary: #3d6d98;
 @brand-info: @brand-primary;
 
+@gray: #646564;
+
+
+html, body {
+	height: 100%;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -150px;
+	padding: 0 0 150px;
+}
 
 header {
 	margin-bottom: 20px;
@@ -22,4 +35,12 @@ header {
 	.nav-pills {
 		margin-top: 15px;
 	}
+}
+
+footer {
+	margin-top: 30px;
+	padding: 20px 0;
+	height: 120px;
+	background-color: @brand-primary;
+	color: white;
 }

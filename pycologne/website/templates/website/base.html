@@ -27,11 +27,13 @@
   </head>
   <body>
     {% cms_toolbar %}
-    <div class="container">
-        {% include "website/header.html" %}
-        {% block base_content %}{% endblock %}
-        {% include "website/footer.html" %} 
+    <div id="wrap">
+        <div class="container">
+            {% include "website/header.html" %}
+            {% block base_content %}{% endblock %}
+        </div>
     </div>
+    {% include "website/footer.html" %}
     {% addtoblock "js" %}
     <script type="text/javascript" src="{{ STATIC_URL }}website/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}website/js/scripts.js"></script>
