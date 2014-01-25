@@ -32,6 +32,8 @@
         {% show_menu 0 100 100 100 %}
     </ul>
     {% block base_content %}{% endblock %}
+    {#required for the userprofiles off-shelve-templates - to be removed after writing our own: #}
+    {% block content %}{% endblock %}
     {% include "footer.html" %} 
     {% addtoblock "js" %}
     <script type="text/javascript" src="{{ STATIC_URL }}website/js/bootstrap.min.js"></script>

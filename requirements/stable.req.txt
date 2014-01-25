@@ -19,3 +19,4 @@ django-bootstrap-pagination
 django-bootstrap-toolkit
 django-piwik
 easy-thumbnails
+django-userprofiles

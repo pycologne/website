@@ -113,6 +113,8 @@ INSTALLED_APPS = (
     # 'taggit',
     # 'cmsplugin_filer_image',
     # custom Apps - TODO
+    'userprofiles',
+    'userprofiles.contrib.accountverification',
 )
 
 STATICFILES_FINDERS = (
@@ -197,3 +199,6 @@ ADMIN_SHORTCUTS = [
         ]
     },
 ]
+
+USERPROFILES_CHECK_UNIQUE_EMAIL = True
+USERPROFILES_USE_ACCOUNT_VERIFICATION = True
