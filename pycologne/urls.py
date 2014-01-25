@@ -18,7 +18,6 @@ urlpatterns = patterns('',
             'cmspages': CMSSitemap,
         }
     }),
-    url(r'^userprofiles/', include('userprofiles.urls')),
     url(r'^', include('cms.urls')),
 )
 
