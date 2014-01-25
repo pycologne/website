@@ -85,12 +85,9 @@ INSTALLED_APPS = (
     # For Django-CMS
     'djangocms_text_ckeditor', # note this needs to be above the 'cms' entry
     'cms',
-    'cms.stacks',
     'mptt',
     'menus',
     'sekizai',
-    # added
-    'cms.stacks',
     #'djangocms_style',
     #'djangocms_column',
     'cms.plugins.file',
@@ -141,7 +138,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'sekizai.context_processors.sekizai',
 )
 
-WSGI_APPLICATION = 'website.wsgi.application'
+WSGI_APPLICATION = 'pycologne.wsgi.application'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',

@@ -1,6 +1,6 @@
 # Requirements for production
 # Use pip install -r stable.req.txt
-django<1.6
+django
 https://github.com/divio/django-cms/archive/develop.zip#egg=django-cms
 south
 gunicorn

@@ -17,12 +17,12 @@ DATABASES = {
 }
 
 MIDDLEWARE_CLASSES += (
-    'devserver.middleware.DevServerMiddleware',
+    #'devserver.middleware.DevServerMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 INSTALLED_APPS += (
-    'devserver',
+    #'devserver',
     'debug_toolbar',
 )
 
