@@ -8,19 +8,15 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'Jumbotron'
-        db.create_table(u'cmsplugin_jumbotron', (
-            (u'cmsplugin_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['cms.CMSPlugin'], unique=True, primary_key=True)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=120)),
-            ('content', self.gf('djangocms_text_ckeditor.fields.HTMLField')()),
-            ('button_title', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-        ))
-        db.send_create_signal(u'website', ['Jumbotron'])
+        # Adding field 'Button.url'
+        db.add_column(u'cmsplugin_button', 'url',
+                      self.gf('django.db.models.fields.URLField')(default='', max_length=200),
+                      keep_default=False)
 
 
     def backwards(self, orm):
-        # Deleting model 'Jumbotron'
-        db.delete_table(u'cmsplugin_jumbotron')
+        # Deleting field 'Button.url'
+        db.delete_column(u'cmsplugin_button', 'url')
 
 
     models = {
@@ -45,13 +41,13 @@ class Migration(SchemaMigration):
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'slot': ('django.db.models.fields.CharField', [], {'max_length': '50', 'db_index': 'True'})
         },
-        u'website.jumbotron': {
-            'Meta': {'object_name': 'Jumbotron', 'db_table': "u'cmsplugin_jumbotron'", '_ormbases': ['cms.CMSPlugin']},
-            'button_title': ('django.db.models.fields.CharField', [], {'max_length': '50', 'null': 'True', 'blank': 'True'}),
+        u'cmsplugin_socialbuttons.button': {
+            'Meta': {'object_name': 'Button', 'db_table': "u'cmsplugin_button'", '_ormbases': ['cms.CMSPlugin']},
             u'cmsplugin_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['cms.CMSPlugin']", 'unique': 'True', 'primary_key': 'True'}),
-            'content': ('djangocms_text_ckeditor.fields.HTMLField', [], {}),
-            'title': ('django.db.models.fields.CharField', [], {'max_length': '120'})
+            'icon_class': ('django.db.models.fields.CharField', [], {'max_length': '40'}),
+            'title': ('django.db.models.fields.CharField', [], {'max_length': '40'}),
+            'url': ('django.db.models.fields.URLField', [], {'max_length': '200'})
         }
     }
 
-    complete_apps = ['website']
+    complete_apps = ['cmsplugin_socialbuttons']
