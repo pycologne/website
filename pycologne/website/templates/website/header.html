@@ -1,3 +1,10 @@
-{% load cms_tags %}
-<b>header</b>
-{% static_placeholder "content_header" %}
+{% load menu_tags staticfiles %}
+<header>
+	<a href="//pycologne.de">
+		<img src="{% static 'website/img/logo.png' %}" alt="Logo von pyCologne" id="mainlogo" />
+	</a>
+	<ul class="nav nav-pills pull-right">
+		{% show_menu 0 0 0 0 "website/menu.html" %}
+	</ul>
+	<div class="clearfix"></div>
+</header>

@@ -1,0 +1,8 @@
+{% load i18n %}
+<div class="jumbotron">
+	<h1>{{ instance.title }}</h1>
+	{{ instance.content|safe }}
+	{% if instance.button_link %}
+	<p><a href="{{ instance.button_link.get_absolute_url }}" class="btn btn-primary btn-lg">{% if instance.button_title %}{{ instance.button_title }}{% else %}{% trans "Read more" %}{% endif %}</a></p>
+	{% endif %}
+</div>
