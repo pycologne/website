@@ -109,6 +109,7 @@ INSTALLED_APPS = (
     'django_rj_utils',
     'bootstrap_toolkit',
     'bootstrap_pagination',
+    'cmsplugin_socialbuttons',
     # future:
     # 'piwik',
     # 'filer',
