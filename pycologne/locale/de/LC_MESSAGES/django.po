@@ -1,13 +1,13 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# PyCologne Website - German Messages 
+# Copyright (C) 2014
+# This file is distributed under the same license as the PyCologne Website package.
+# PyCologne Usergroup, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-21 20:29+0200\n"
+"POT-Creation-Date: 2014-01-25 17:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,3 +16,79 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: events/models.py:6
+msgid "regular"
+msgstr "reguläres Treffen"
+
+#: events/models.py:7
+msgid "exhibition"
+msgstr "Veranstaltung"
+
+#: events/models.py:8
+msgid "conference"
+msgstr "Konferenz"
+
+#: events/models.py:16 events/models.py:40
+msgid "Title"
+msgstr "Titel"
+
+#: events/models.py:17 events/models.py:41
+msgid "slug"
+msgstr "Slug"
+
+#: events/models.py:18
+msgid "postal"
+msgstr "PLZ"
+
+#: events/models.py:19
+msgid "street"
+msgstr "Strße"
+
+#: events/models.py:20
+msgid "city"
+msgstr "Stadt"
+
+#: events/models.py:22 events/models.py:46
+msgid "Link"
+msgstr ""
+
+#: events/models.py:30 events/models.py:45
+msgid "location"
+msgstr "Ort"
+
+#: events/models.py:31
+msgid "locations"
+msgstr "Orte"
+
+#: events/models.py:42
+msgid "kind"
+msgstr "Art"
+
+#: events/models.py:43
+msgid "Date"
+msgstr "Datum"
+
+#: events/models.py:44
+msgid "End date"
+msgstr "Enddatum"
+
+#: events/models.py:60
+msgid "event"
+msgstr "Ereignis"
+
+#: events/models.py:61
+msgid "events"
+msgstr "Ereignisse"
+
+#: events/templates/events/tags/list_events.html:26
+msgid "No upcoming events"
+msgstr "keine zukünftigen Ereignisse"
+
+#: settings/base.py:25
+msgid "German"
+msgstr "Deutsch"
+
+#: settings/base.py:196
+msgid "Pages"
+msgstr "Seiten"

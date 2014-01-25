@@ -11,3 +11,5 @@ staticfiles/
 .settings
 .project
 .pydevproject
+/META-INF
+/build.properties
