@@ -17,3 +17,5 @@ class Jumbotron(CMSPlugin):
     button_title = models.CharField(max_length=50,
                                     verbose_name=_(u'Button title'),
                                     null=True, blank=True)
+    #button_link = PageField(verbose_name=_(u'Button link'),
+    #                        null=True, blank=True)
