@@ -7,7 +7,7 @@ gunicorn
 raven
 python-memcached
 psycopg2
-PIL
+pillow
 python-dateutil
 supervisor
 django-compressor
