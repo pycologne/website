@@ -163,6 +163,7 @@ THUMBNAIL_PROCESSORS = (
 CMS_TEMPLATES = (
     ## Customize this
     ('default.html', 'Default'),
+    ('home.html', 'Home'),
     # ('index.html', 'Home (index)'),
     ('demo.html', 'Demo (static page)')
     # TODO - add custom templates!
