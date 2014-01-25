@@ -1,11 +1,21 @@
+# -*- coding: utf-8 -*-
+
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from cms.models import CMSPlugin
 
 
 EVENT_KIND_CHOICES = (
     (1, _('regular')),
     (2, _('exhibition')),
     (3, _('conference')),
+)
+
+PARTICIPATION_CHOICES = (
+    (0, _(u'Decline')),
+    (1, _(u'Attend')),
+    (2, _(u'Maybe')),
 )
 
 class Location(models.Model):
@@ -60,3 +70,23 @@ class Event(models.Model):
         verbose_name = _('event')
         verbose_name_plural = _('events')
         ordering = ['date']
+
+
+class EventPlugin(CMSPlugin):
+    """
+    Plugin for Django CMS.
+    """
+    event = models.ForeignKey('events.Event', related_name='plugins')
+
+    def __unicode__(self):
+        return self.event.title
+
+
+class Participant(models.Model):
+    """Participants for an event."""
+    event = models.ForeignKey(Event, verbose_name=_(u'Event'))
+    answer = models.IntegerField(_(u'Answer'), choices=PARTICIPATION_CHOICES)
+    registered_participant = models.ForeignKey(User,
+        verbose_name=_(u'Registered user'), blank=True, null=True)
+    unregistered_user = models.CharField(_(u'Unregistered user'),
+        max_length=100, blank=True, null=True)

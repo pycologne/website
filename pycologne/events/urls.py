@@ -3,6 +3,6 @@ from django.conf.urls import patterns, url
 from . import views
 
 urlpatterns = patterns('',
-    url(r'^details/(?P<pk>\d+)/$', views.view_event, name='events.eventdetails'),
-    url(r'^all/$', views.view_events, name='events.allevents'),
+    url(r'^(?P<pk>\d+)/$', views.DetailView.as_view(), name='events.details'),
+    url(r'^', views.view_events, name='events.all'),
 )
