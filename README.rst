@@ -147,7 +147,7 @@ carried out as this user, unless stated otherwise.
 
 #. Install LESS_::
 
-        $ npm install less
+        $ npm install -g less
 
 #. Create a virtualenv ``pycologne-staging``::
 
