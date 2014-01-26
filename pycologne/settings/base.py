@@ -109,6 +109,7 @@ INSTALLED_APPS = (
     'django_rj_utils',
     'bootstrap_toolkit',
     'bootstrap_pagination',
+    'cmsplugin_socialbuttons',
     # future:
     # 'piwik',
     # 'filer',
@@ -202,5 +203,8 @@ ADMIN_SHORTCUTS = [
     },
 ]
 
+# User self.registration via Mail
 USERPROFILES_CHECK_UNIQUE_EMAIL = True
 USERPROFILES_USE_ACCOUNT_VERIFICATION = True
+
+LOGIN_REDIRECT_URL = '/'

@@ -36,13 +36,10 @@
         </div>
     </div>
     {% include "website/footer.html" %}
-    {% addtoblock "js" %}
-    <script type="text/javascript" src="{{ STATIC_URL }}website/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}website/js/scripts.js"></script>
-    {% endaddtoblock %}
+    {% addtoblock "js" %}<script type="text/javascript" src="{{ STATIC_URL }}website/js/bootstrap.min.js"></script>{% endaddtoblock %}
+    {% addtoblock "js" %}<script type="text/javascript" src="{{ STATIC_URL }}website/js/scripts.js"></script>{% endaddtoblock %}
     {% render_block "js" postprocessor "django_rj_utils.sekizai_postprocessor.compress" %}
-    {% addtoblock "css" %}
-    <link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}website/css/website.less" />
-    {% endaddtoblock %}
+    {% addtoblock "css" %}<link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}website/css/website.less" />{% endaddtoblock %}
+    {% addtoblock "css" %}<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}website/css/font-awesome.min.css" />{% endaddtoblock %}
   </body>
 </html>

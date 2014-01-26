@@ -7,4 +7,5 @@
 		{% show_menu 0 100 100 100 "website/menu.html" %}
 	</ul>
 	<div class="clearfix"></div>
+	{% if request.user.is_authenticated %} {{ request.user.username }} - <a href="{% url 'django.contrib.auth.views.logout' %}">Logout</a>{% else %} <a href="{% url 'django.contrib.auth.views.login' %}">Login</a> {% endif %}
 </header>

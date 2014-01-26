@@ -18,7 +18,12 @@ urlpatterns = patterns('',
             'cmspages': CMSSitemap,
         }
     }),
-    url(r'^userprofiles/', include('userprofiles.urls')),
+    url(r'^login/$', 'django.contrib.auth.views.login', {
+       'template_name': 'website/login.html'
+    }),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', {
+       'next_page': '/'
+    }),
     url(r'^', include('cms.urls')),
 )
 
