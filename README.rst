@@ -205,7 +205,7 @@ carried out as this user, unless stated otherwise.
 #. (As root) Install the Nginx configuration::
 
         $ sudo install -m 644 config/ngingx.conf \
-            /etc/nginx-sites-available/staging.pycologne.de
+            /etc/nginx/sites-available/staging.pycologne.de
         $ sudo ln -s ../sites-available/staging.pycologne.de \
             /etc/nginx/sites-enabled
 
