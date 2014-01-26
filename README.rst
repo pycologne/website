@@ -91,6 +91,11 @@ Server setup
 
         service postgresql reload
 
+   (for a local trusted development machine, you might want to use instead:)
+
+        host    all         all         127.0.0.1/32                trust
+        
+
 #. Follow steps 4. and 5. under Installation
 
 #. TBC...
