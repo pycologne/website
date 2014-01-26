@@ -70,9 +70,8 @@ def update_source():
 
 def clear_remote_static_cache():
     """Clears the django compressor cache on the remote server."""
-    with cd(PROJECT_DIR), prefix('workon %s' % VIRTUAL_ENV_NAME):
-        with shell_env(ENV=ENV):
-            run('fab clear_static_cache')
+    with cd(PROJECT_DIR), prefix('workon %s' % VIRTUAL_ENV_NAME), shell_env(ENV=ENV):
+        run('fab clear_static_cache')
 
 
 def deploy():
