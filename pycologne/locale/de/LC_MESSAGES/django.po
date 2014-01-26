@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 17:23+0100\n"
+"POT-Creation-Date: 2014-01-26 22:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,78 +17,206 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: events/models.py:6
+#: events/cms_app.py:8
+msgid "events-app"
+msgstr "Termine-App"
+
+#: events/cms_plugins.py:18
+msgid "Event Plugin"
+msgstr "Termin-Plugin"
+
+#: events/cms_plugins.py:32
+msgid "Participant  Plugin"
+msgstr "Abstimmungs-Plugin (Doodle)"
+
+#: events/menu.py:14
+msgid "Events Menu"
+msgstr "Termin-Menü"
+
+#: events/menu.py:45 events/views.py:31
+msgid "All Events"
+msgstr "Alle Termine"
+
+#: events/models.py:10
 msgid "regular"
 msgstr "reguläres Treffen"
 
-#: events/models.py:7
+#: events/models.py:11
 msgid "exhibition"
 msgstr "Veranstaltung"
 
-#: events/models.py:8
+#: events/models.py:12
 msgid "conference"
 msgstr "Konferenz"
 
-#: events/models.py:16 events/models.py:40
+#: events/models.py:16 events/templates/events/voting_plugin.html:16
+msgid "Decline"
+msgstr "Absagen"
+
+#: events/models.py:17 events/templates/events/voting_plugin.html:12
+msgid "Attend"
+msgstr "Zusagen"
+
+#: events/models.py:18 events/templates/events/voting_plugin.html:14
+msgid "Maybe"
+msgstr "Vielleicht"
+
+#: events/models.py:26 events/models.py:50
+#: events/templates/events/events.html:16 website/models.py:15
 msgid "Title"
 msgstr "Titel"
 
-#: events/models.py:17 events/models.py:41
+#: events/models.py:27 events/models.py:51
 msgid "slug"
 msgstr "Slug"
 
-#: events/models.py:18
+#: events/models.py:28
 msgid "postal"
 msgstr "PLZ"
 
-#: events/models.py:19
+#: events/models.py:29
 msgid "street"
-msgstr "Strße"
+msgstr "Straße"
 
-#: events/models.py:20
+#: events/models.py:30
 msgid "city"
 msgstr "Stadt"
 
-#: events/models.py:22 events/models.py:46
+#: events/models.py:32 events/models.py:56
 msgid "Link"
 msgstr ""
 
-#: events/models.py:30 events/models.py:45
+#: events/models.py:40 events/models.py:55
 msgid "location"
 msgstr "Ort"
 
-#: events/models.py:31
+#: events/models.py:41
 msgid "locations"
 msgstr "Orte"
 
-#: events/models.py:42
+#: events/models.py:52
 msgid "kind"
 msgstr "Art"
 
-#: events/models.py:43
+#: events/models.py:53 events/templates/events/event_details.html:17
+#: events/templates/events/events.html:18
 msgid "Date"
 msgstr "Datum"
 
-#: events/models.py:44
+#: events/models.py:54
 msgid "End date"
 msgstr "Enddatum"
 
-#: events/models.py:60
+#: events/models.py:70
 msgid "event"
-msgstr "Ereignis"
+msgstr "Termin"
 
-#: events/models.py:61
+#: events/models.py:71 events/views.py:28
 msgid "events"
-msgstr "Ereignisse"
+msgstr "Termine"
+
+#: events/models.py:87 events/templates/events/event.html:5
+msgid "Event"
+msgstr "Termin"
+
+#: events/models.py:88
+msgid "Answer"
+msgstr "Antwort"
+
+#: events/models.py:90
+msgid "Registered user"
+msgstr "Registrierter Benutzer"
+
+#: events/models.py:91
+msgid "Unregistered user"
+msgstr "nicht registrierter Benutzer"
+
+#: events/views.py:29
+msgid "Add Event"
+msgstr "Termin anlegen"
+
+#: events/views.py:30
+msgid "Edit Event"
+msgstr "Termin ändern"
+
+#: events/views.py:32
+msgid "Show History of this Event"
+msgstr "Änderungshistorie anzeigen"
+
+#: events/views.py:33
+msgid "Delete this Event"
+msgstr "Termin löschen"
+
+#: events/templates/events/event_details.html:10
+msgid "Description"
+msgstr "Beschreibung"
+
+#: events/templates/events/event_details.html:24
+#: events/templates/events/events.html:17
+msgid "Location"
+msgstr "Ort"
+
+#: events/templates/events/events.html:5
+#: events/templates/events/events.html:10
+msgid "Events"
+msgstr "Termine"
+
+#: events/templates/events/events.html:32
+msgid "No events found."
+msgstr "Keine Termine gefunden."
+
+#: events/templates/events/voting_plugin.html:17
+msgid "Vote"
+msgstr "Abstimmen"
 
 #: events/templates/events/tags/list_events.html:26
 msgid "No upcoming events"
-msgstr "keine zukünftigen Ereignisse"
+msgstr "Keine zukünftigen Termine"
 
 #: settings/base.py:25
 msgid "German"
 msgstr "Deutsch"
 
-#: settings/base.py:196
+#: settings/base.py:200
 msgid "Pages"
 msgstr "Seiten"
+
+#: website/cms_app.py:10
+msgid "User Profiles"
+msgstr "Benutzerprofile"
+
+#: website/cms_plugins.py:14
+msgid "Jumbotron"
+msgstr ""
+
+#: website/menu.py:13
+msgid "User"
+msgstr "Benutzer"
+
+#: website/menu.py:15
+msgid "Profile"
+msgstr "Profil"
+
+#: website/menu.py:16
+msgid "Log in"
+msgstr "Anmelden"
+
+#: website/menu.py:18
+msgid "Sign up"
+msgstr "Registrieren"
+
+#: website/menu.py:19
+msgid "Log out"
+msgstr "Abmelden"
+
+#: website/models.py:16
+msgid "Text"
+msgstr ""
+
+#: website/models.py:18
+msgid "Button title"
+msgstr "Titel der Schaltfläche"
+
+#: website/templates/website/jumbotron.html:6
+msgid "Read more"
+msgstr "Mehr lesen"
