@@ -10,20 +10,6 @@
 
 <h1>{{ event.title }}</h1>
 
-<div class="details">
-{% if event.date or event.end_date %}
-<dl>
-    <dt>{% trans "Date" %}:</dt>
-    <dd>{{ event.date|date:"DATE_FORMAT" }} von {{ event.date|time:"TIME_FORMAT" }} - {{ event.end_date|time:"TIME_FORMAT" }}</dd>
-</dl>
-{% endif %}
-
-{% if event.location %}
-<dl>
-    <dt>{% trans "Location" %}:</dt>
-    <dd>{{ event.location.title }}</dd>
-</dl>
-{% endif %}
-</div>
+{% include "events/event_details.html" with event=event %}
 
 {% endblock %}
