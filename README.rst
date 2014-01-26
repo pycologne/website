@@ -179,9 +179,11 @@ carried out as this user, unless stated otherwise.
         $ ENV=staging python manage.py syncdb --all
         $ ENV=staging python manage.py migrate --fake
         $ ENV=staging python manage.py compilemessages
-        $ ENV=staging python manage.py collectstatic
+        $ ENV=staging python manage.py collectstatic --noinput
 
-    (Answer ``'yes'`` when prompted whether to overwrite existing files.)
+    Choose a user name and a secure password for the django CMS adminstration
+    user when prompted. You will nedd those later to log into the web
+    administration frontend.
 
 #. (As root) Install the Nginx configuration::
 
