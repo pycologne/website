@@ -17,7 +17,6 @@ Pre-Requirements
 * virtualenv
 * PostgreSQL
 * sqlite3
-* LESS_
 
 (including header files, i.e. on debian-like systems install the
 'postgresql-dev' package)
@@ -71,10 +70,10 @@ Staging server setup
 
 #. Install prerequisites via your distribution's package manager::
 
-        $ sudo apt-get install git-core python python-dev python-virtualenv \
-            python-pip postgresql nginx libjs-less
+        $ sudo apt-get install build-essential curl git-core \
+            python python-dev python-virtualenv python-pip postgresql nginx
 
-    .. _note::
+   .. _note::
         Make sure that the Python packages you install are for Python 2.7. On
         newer distribution you might have to change the ``python`` part in the
         package names to ``python2``.
@@ -91,8 +90,8 @@ Staging server setup
 #. Create a PostgresSQL database (on debian do this as the user ``postgres``)::
 
         $ su - postgres
-        $ createuser -P -D -R -S pycologne-staging
-        $ createdb -O pycologne-staging pycologne-staging
+        (postgres)$ createuser -P -D -R -S pycologne-staging
+        (postgres)$ createdb -O pycologne-staging pycologne-staging
 
 #. Edit ``/etc/postgresql/9.1/main/pg_hba.conf`` and add this line::
 
@@ -116,6 +115,10 @@ carried out as this user, unless stated otherwise.
 #. Add the following to the end of ``~ /.profile`` (or ``~/.bash_profile``, if
    you have it)::
 
+        if [ -d "$HOME/local" ] ; then
+            PATH="$HOME/local/bin:$PATH"
+        fi
+
         export WORKON_HOME=$HOME/lib/venvs
         export PIP_VIRTUALENV_BASE=$WORKON_HOME
         export PIP_RESPECT_VIRTUALENV=true
@@ -125,12 +128,26 @@ carried out as this user, unless stated otherwise.
 
 #. And create a few directories::
 
-        $ mkdir -p ~/bin ~/etc ~/lib/venvs ~/sites \
+        $ mkdir -p ~/bin ~/etc ~/lib/venvs ~/local ~/sites \
             ~/var/{log,run,tmp} ~/.pip_download_cache
 
 #. Log out and log in again as user ``pycologne`` for the environment changes
    to take effect. On logging in you will see a bunch of messages by
    virtualenvwrappper while it creates some scripts under ``$WORKON_HOME``.
+
+#. Install Node.js_ (from source)::
+
+        $ cd ~/var/tmp
+        $ curl http://nodejs.org/dist/node-latest.tar.gz | tar -xz
+        $ cd node-v0.10.*
+        $ ./configure --prefix=~/.local
+        $ make install
+
+   You can go and have a LARGE coffee while Node.js compiles.
+
+#. Install LESS_::
+
+        $ npm install less
 
 #. Create a virtualenv ``pycologne-staging``::
 
@@ -175,15 +192,15 @@ carried out as this user, unless stated otherwise.
         $ pip install django fabric
         $ python -c "import uuid;print('SECRET_KEY = \"%s\"'%uuid.uuid1())" \
             >> pycologne/settings/local.py
-        $ fab install_dev_requirements
+        $ fab install_stable_requirements
         $ ENV=staging python manage.py syncdb --all
         $ ENV=staging python manage.py migrate --fake
         $ ENV=staging python manage.py compilemessages
         $ ENV=staging python manage.py collectstatic --noinput
 
-    Choose a user name and a secure password for the django CMS adminstration
-    user when prompted. You will nedd those later to log into the web
-    administration frontend.
+   Choose a user name and a secure password for the django CMS adminstration
+   user when prompted. You will need those later to log into the web
+   administration frontend.
 
 #. (As root) Install the Nginx configuration::
 
