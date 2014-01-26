@@ -73,8 +73,7 @@ class Event(models.Model):
 
 
 class EventPlugin(CMSPlugin):
-    """
-    Plugin for Django CMS to show a particular event on a page.
+    """Plugin for Django CMS to show a particular event on a page.
     Shows details about the event and doesn't allow interaction.
     """
     event = models.ForeignKey('events.Event', related_name='plugins')

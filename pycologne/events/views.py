@@ -28,7 +28,7 @@ class DetailView(generic.DetailView):
         menu = request.toolbar.get_or_create_menu('events-app', _('events'))
         menu.add_modal_item(_('Add Event'), url=reverse('admin:events_event_add', args=[]))
         menu.add_modal_item(_('Edit Event'), url=reverse('admin:events_event_change', args=[event_id]))
-        menu.add_link_item(_('List Events'), url=reverse('pycologne.events.all', args=[]))
+        menu.add_link_item(_('All Events'), url=reverse('pycologne.events.all', args=[]))
         menu.add_sideframe_item(_('Show History of this Event'), url=reverse('admin:events_event_history', args=[event_id]))
         menu.add_sideframe_item(_('Delete this Event'), url=reverse('admin:events_event_delete', args=[event_id]))
 
@@ -36,6 +36,7 @@ class DetailView(generic.DetailView):
 
 
 # TODO: use generic list view (!?)
+# TODO: group/filter by year (!?)
 
 def view_events(request):
     events = models.Event.objects.order_by('date').all()

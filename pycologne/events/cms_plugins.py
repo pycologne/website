@@ -12,12 +12,11 @@ from django.utils.translation import ugettext as _
 
 class EventPlugin(CMSPluginBase):
     """
-    Plugin for Django CMS to show an event on a page
-    and allow to vote for participation on it.
+    Plugin for Django CMS to show a selected event on a page.
     """
-    model = EventPluginModel # Model where data about this plugin is saved
-    name = _("Event Plugin") # Name of the plugin
-    render_template = "events/event_plugin.html" # template to render the plugin with
+    model = EventPluginModel  # Model where data about this plugin is saved
+    name = _("Event Plugin")  # Name of the plugin
+    render_template = "events/event_plugin.html"  # template to render the plugin with
 
     def render(self, context, instance, placeholder):
         context.update({'instance':instance})
