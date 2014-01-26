@@ -55,7 +55,7 @@ def memcached(task='start'):
 
 def nginx(task='reload'):
     """Controls the nginx webserver."""
-    run('nginx -s %s' % task)
+    run('sudo service nginx %s' % task)
 
 
 def update_source():
