@@ -1,0 +1,4 @@
+{% load i18n %}
+<h1>{{ instance.event.title }}</h1>
+
+{% include "events/event_details.html" with event=instance.event %}

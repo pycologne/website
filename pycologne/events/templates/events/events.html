@@ -21,7 +21,7 @@
         <tbody>
             {% for event in events %}
             <tr>
-                <td><a href="{% url 'events.details' event.pk %}">{{ event.title }}</a></td>
+                <td><a href="{% url 'pycologne.events.details' event.pk %}">{{ event.title }}</a></td>
                 <td>{{ event.location }}</td>
                 <td>{{ event.date|date:"DATE_FORMAT" }}: {{ event.date|time:"TIME_FORMAT" }} - {{ event.end_date|time:"TIME_FORMAT" }}</td>
             </tr>

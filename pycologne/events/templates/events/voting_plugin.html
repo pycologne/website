@@ -1,0 +1,18 @@
+{% load i18n %}
+<h1>{{ upcoming.title }}</h1>
+
+{% include "events/event_details.html" with event=upcoming %}
+
+<! TODO: provide view to submit voting e.g. 'pycologne.events.vote'
+         and ask for username (if not logged in user)
+->
+<form action="{% url 'pycologne.events.details' upcoming.id %}" method="post">
+    {% csrf_token %}
+        <input type="radio" name="choice" id="choice_yes" value="1" />
+        <label for="choice_yes">{% trans "Attend" %}</label><br />    
+        <input type="radio" name="choice" id="choice_maybe" value="2" />
+        <label for="choice_maybe">{% trans "Maybe" %}</label><br />    
+        <input type="radio" name="choice" id="choice_no" value="0" />
+        <label for="choice_no">{% trans "Decline" %}</label><br />
+    <input type="submit" value="Vote" />
+</form>

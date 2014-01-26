@@ -62,7 +62,7 @@ class Event(models.Model):
 
     def __unicode__(self):
         return u"{0}, {1} ({2})".format(
-            self.title, 
+            self.title,
             self.date.strftime('%d.%m.%Y'),
             self.get_kind_display())
 
@@ -74,7 +74,8 @@ class Event(models.Model):
 
 class EventPlugin(CMSPlugin):
     """
-    Plugin for Django CMS.
+    Plugin for Django CMS to show a particular event on a page.
+    Shows details about the event and doesn't allow interaction.
     """
     event = models.ForeignKey('events.Event', related_name='plugins')
 

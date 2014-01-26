@@ -1,0 +1,28 @@
+{% load i18n %}
+
+<div class="event_details">
+
+<! TODO: include some event description - from extra description field or auto-generated
+         from the related sessions ...
+ -->
+{% if event.description %}
+<dl>
+    <dt>{% trans "Description" %}:</dt>
+    <dd>{{ event.description }}</dd>
+</dl>
+{% endif %}
+
+{% if event.date or event.end_date %}
+<dl>
+    <dt>{% trans "Date" %}:</dt>
+    <dd>{{ event.date|date:"DATE_FORMAT" }}: {{ event.date|time:"TIME_FORMAT" }} - {{ event.end_date|time:"TIME_FORMAT" }}</dd>
+</dl>
+{% endif %}
+
+{% if event.location %}
+<dl>
+    <dt>{% trans "Location" %}:</dt>
+    <dd>{{ event.location.title }}</dd>
+</dl>
+{% endif %}
+</div>
