@@ -29,11 +29,11 @@ Installation
 
 1. Either:
 
-    - Clone this repository directly (website team members)::
+   - Clone this repository directly (website team members)::
 
         $ git clone https://github.com/pycologne/website.git
 
-    - Or fork this repository and clone your fork (others).
+   - Or fork this repository and clone your fork (others).
 
 3. Make a virtual environment using mkvirtualenv or mkproject, e.g.::
 
