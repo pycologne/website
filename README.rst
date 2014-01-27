@@ -140,7 +140,7 @@ carried out as this user, unless stated otherwise.
         $ cd ~/var/tmp
         $ curl http://nodejs.org/dist/node-latest.tar.gz | tar -xz
         $ cd node-v0.10.*
-        $ ./configure --prefix=~/.local
+        $ ./configure --prefix=~/local
         $ make install
 
    You can go and have a LARGE coffee while Node.js compiles.
