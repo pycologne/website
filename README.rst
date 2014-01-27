@@ -6,6 +6,7 @@ This is the code for the website of the Python UserGroup Cologne pyCologne_.
 .. _pycologne: http://www.pycologne.de
 
 
+
 Development
 -----------
 
@@ -22,6 +23,7 @@ Pre-Requirements
 'postgresql-dev' package)
 
 .. _less: http://www.lesscss.org/
+.. _Node.js: http://www.nodejs.org/
 
 
 Installation
@@ -73,7 +75,7 @@ Staging server setup
         $ sudo apt-get install build-essential curl git-core \
             python python-dev python-virtualenv python-pip postgresql nginx
 
-   .. _note::
+   .. note::
         Make sure that the Python packages you install are for Python 2.7. On
         newer distribution you might have to change the ``python`` part in the
         package names to ``python2``.
@@ -234,3 +236,11 @@ carried out as this user, unless stated otherwise.
    You can check the status of the application server with supervisorctl::
 
         $ supervisorctl -c ~/etc/supervisor.conf status
+        
+     
+Credits
+-------
+
+Parts of this project are based on work by the Python Software Foundation (PySV)
+for the PyCon.DE Website (see https://bitbucket.org/PySV/pycon_de_website) - which
+in turn is based on the Symposion apps.
