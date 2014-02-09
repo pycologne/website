@@ -45,7 +45,7 @@ def supervisorctl(task):
 def memcached(task='start'):
     """Controls the memcached."""
     if task == 'start':
-        run('memcached -d -m 256 -P %s/var/run/memcached.pid' % HOME)
+        run('memcached -d -m 128 -P %s/var/run/memcached.pid' % HOME)
     elif task == 'stop':
         run('kill $(cat %s/var/run/memcached.pid)' % HOME)
     elif task == 'restart':
@@ -80,4 +80,4 @@ def deploy():
     update_source()
     clear_remote_static_cache()
     supervisorctl('start')
-    memcached('start')
+    memcached('restart')
