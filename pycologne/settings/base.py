@@ -75,17 +75,18 @@ INSTALLED_APPS = (
     'pycologne.website',
     # Custom administration
     'admin_shortcuts',
+    # note: 'djangocms_admin_style' must be added before 'django.contrib.admin'.
     'djangocms_admin_style',
     # Default Django apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
     #'django-reversion',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'django.contrib.sites',
     # For Django-CMS
     'djangocms_text_ckeditor', # note this needs to be above the 'cms' entry
     'cms',
@@ -102,7 +103,6 @@ INSTALLED_APPS = (
     #'cms.plugins.link',
     #'cms.plugins.picture',
     #'cms.plugins.snippet',
-    #'cms.plugins.teaser',
     #'cms.plugins.teaser',
     #'cms.plugins.video',
     #'reversion',
