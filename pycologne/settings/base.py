@@ -69,6 +69,8 @@ ROOT_URLCONF = 'pycologne.urls'
 
 INSTALLED_APPS = (
     # custom Apps for PyCologne Website
+    # for initial syncdb, comment those out, afterwards include them again
+    # and use migrate
     'pycologne.events',
     'pycologne.website',
     # Custom administration
@@ -92,15 +94,17 @@ INSTALLED_APPS = (
     'sekizai',
     #'djangocms_style',
     #'djangocms_column',
-    'cms.plugins.file',
-    'cms.plugins.googlemap',
+    # Django CMS plugins have been removed from standard distribution.
+    # See https://django-cms.readthedocs.org/en/develop/upgrade/3.0.html#plugins-removed
+    #'cms.plugins.file',
+    #'cms.plugins.googlemap',
     #'cms.plugins.inherit',
-    'cms.plugins.link',
-    'cms.plugins.picture',
-    'cms.plugins.snippet',
-    'cms.plugins.teaser',
-    'cms.plugins.teaser',
-    'cms.plugins.video',
+    #'cms.plugins.link',
+    #'cms.plugins.picture',
+    #'cms.plugins.snippet',
+    #'cms.plugins.teaser',
+    #'cms.plugins.teaser',
+    #'cms.plugins.video',
     #'reversion',
     # Other
     'easy_thumbnails',
