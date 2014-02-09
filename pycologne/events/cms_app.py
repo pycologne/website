@@ -10,4 +10,4 @@ class EventsApp(CMSApp):
     menus = [EventsMenu] # attach a CMSAttachMenu to this apphook.
 
 # register CMS App
-apphook_pool.register(EventsApp)  
+apphook_pool.register(EventsApp)
