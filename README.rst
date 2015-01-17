@@ -1,7 +1,15 @@
 PyCologne Website
 =================
 
-This is the code for the website of the Python UserGroup Cologne pyCologne_.
+This is an **outdated repository** containing the code of an abandoned 
+attempt at building a new website for the Python UserGroup Cologne
+pyCologne_ based on djangoCMS.
+
+**PLEASE DO NOT USE!**
+
+Go to this Bitbucket mercurial repository for the new website instead:
+
+    https://bitbucket.org/PySV/pycologne-app
 
 .. _pycologne: http://www.pycologne.de
 
